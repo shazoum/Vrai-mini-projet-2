@@ -24,8 +24,9 @@ public class Program {
 	public static void main(String[] args) {
 
 		// Define cascading file system
-		FileSystem fileSystem = new FolderFileSystem(new ResourceFileSystem(DefaultFileSystem.INSTANCE)); 
-	
+		FileSystem fileSystem = new FolderFileSystem(new ResourceFileSystem(DefaultFileSystem.INSTANCE));
+		//Comment que j'espère que ca marche
+		
 		// Use Swing display
 		Window window = new SwingWindow("Play", fileSystem);
 		try {
