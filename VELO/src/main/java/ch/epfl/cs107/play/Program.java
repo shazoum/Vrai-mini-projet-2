@@ -1,7 +1,7 @@
 package ch.epfl.cs107.play;
 
 import ch.epfl.cs107.play.game.Game;
-import ch.epfl.cs107.play.game.tutorial.HelloWorldGame;
+import ch.epfl.cs107.play.game.tutorial.SimpleCrateGame;
 import ch.epfl.cs107.play.io.DefaultFileSystem;
 import ch.epfl.cs107.play.io.FileSystem;
 import ch.epfl.cs107.play.io.FolderFileSystem;
@@ -26,19 +26,12 @@ public class Program {
 		// Define cascading file system
 		FileSystem fileSystem = new FolderFileSystem(new ResourceFileSystem(DefaultFileSystem.INSTANCE));
 
-		//Comment que j'espère que ca marche2 
-		//salut
-		 
-
-		//Comment que j'espère que ca marche
-		
-
 		// Use Swing display
 		Window window = new SwingWindow("Play", fileSystem);
 		try {
 
 			// Create a demo game
-			Game game = new HelloWorldGame();
+			Game game = new SimpleCrateGame();
 			if (game.begin(window, fileSystem)) {
 
 				// Use system clock to keep track of time progression
